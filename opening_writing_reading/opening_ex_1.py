@@ -59,3 +59,19 @@ finally:
 fp=open("sample.txt","w")
 print("File Created and Opened in Write Mode")
 print("Type of fp=",type(fp))  # <class '_io.TextIOWrapper'>
+
+#=======================================================================================================================
+
+#program for Demonstrating Opening the File
+#FileOpen(with open('file_name','File Mode') as file_pointer_variable:) Ex1.py
+try:
+    with open("kvr2.data","r") as fp:
+        print("--------with open() as-------------")
+        print("\tFile Opened in read Mode")
+        print("\tType of fp=", type(fp))
+        print("\twith open() as: Is File Closed?:", fp.closed)
+        print("-------------------------------------")
+    print("--------after with open() as-------------")
+    print("\tafter with open() as: Is File Closed?:", fp.closed)
+except FileNotFoundError:
+    print("File Does not Exist")
