@@ -39,3 +39,15 @@ finally:
         print("finally block:Is File Closed?:", fp.closed)
     except NameError:
         print("File Name Itself does not opened-there is no need to close:")
+
+
+# Mode,| First Line:                               |   Action & Pointer Position,                             |  Second Line:                                 |   File Creation & Overwrite Behavior                               |
+# -----|-------------------------------------------|----------------------------------------------------------|-----------------------------------------------|--------------------------------------------------------------------|
+# r,   | Read mode;                                |   pointer starts at the beginning of the file.,          |  Requires the file to exist;                  |   raises FileNotFoundError if it doesn't.                          |
+# w,   | Write mode;                               |   pointer starts at the beginning of the file.,          |  Creates the file if it doesn't exist;        |   overwrites content if it does.                                   |
+# a,   | Append mode;                              |   pointer starts at the end of the file.,                |  Creates the file if it doesn't exist;        |   appends to existing content if it does.                          |
+# r+,  | Read and Write mode;                      |   pointer starts at the beginning of the file.,          |  Requires the file to exist;                  |   allows both reading and writing (overwriting current content).   |
+# w+,  | Write and Read mode;                      |   pointer starts at the beginning of the file.,          |  Creates the file if it doesn't exist;        |   overwrites content if it does.                                   |
+# a+,  | Append and Read mode;                     |   pointer starts at the end of the file for writing.,    |  Creates the file if it doesn't exist;        |   allows reading from the start and writing at the end.            |
+# x,   | Exclusive Creation mode;                  |   pointer starts at the beginning of the file.,          |  Creates the file only if it does not exist;  |   raises FileExistsError otherwise.                                |
+# x+,  | Exclusive Creation and Read/Write mode;   |   pointer starts at the beginning of the file.,          |  Creates the file only if it does not exist;  |   raises FileExistsError otherwise.                                |
