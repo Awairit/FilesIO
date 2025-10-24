@@ -51,3 +51,11 @@ finally:
 # a+,  | Append and Read mode;                     |   pointer starts at the end of the file for writing.,    |  Creates the file if it doesn't exist;        |   allows reading from the start and writing at the end.            |
 # x,   | Exclusive Creation mode;                  |   pointer starts at the beginning of the file.,          |  Creates the file only if it does not exist;  |   raises FileExistsError otherwise.                                |
 # x+,  | Exclusive Creation and Read/Write mode;   |   pointer starts at the beginning of the file.,          |  Creates the file only if it does not exist;  |   raises FileExistsError otherwise.                                |
+
+#=======================================================================================================================
+
+#program for Demonstrating Opening the File
+#FileOpenEx2.py
+fp=open("sample.txt","w")
+print("File Created and Opened in Write Mode")
+print("Type of fp=",type(fp))  # <class '_io.TextIOWrapper'>
