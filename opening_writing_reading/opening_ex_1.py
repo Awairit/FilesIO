@@ -75,3 +75,21 @@ try:
     print("\tafter with open() as: Is File Closed?:", fp.closed)
 except FileNotFoundError:
     print("File Does not Exist")
+
+#=======================================================================================================================
+
+#program for Demonstrating Opening the File along with File attributes
+#FileOpenEx4.py
+try:
+    with open("kvr2.data","a+") as fp:
+        print("----------------------------------------")
+        print("\twith open() as: Is File Closed?:", fp.closed)
+        print("\tFile Name:{}".format(fp.name))
+        print("\tFile Opening Mode:{}".format(fp.mode))
+        print("\tIs File Readable? :{}".format(fp.readable()))
+        print("\tIs File Writable? :{}".format(fp.writable()))
+        print("-----------------------------------------")
+    print("--------after with open() as-------------")
+    print("\tafter with open() as: Is File Closed?:", fp.closed)
+except FileNotFoundError:
+    print("File Does not Exist")
