@@ -17,3 +17,25 @@ finally:
         print("File closed successfully")
     except NameError: #we don't have file so it can't assign it to a variable i.e. Name
         print("File Name Itself does not opened-there is no need to close:")
+
+#=======================================================================================================================
+
+#program for Demonstrating Opening the File
+#FileOpenEx1.py
+try:
+    fp=open("kvr1.data","r")
+except FileNotFoundError:
+    print("File Does not Exist")
+else:
+    print("--------else block-------------")
+    print("File Opened in read Mode")
+    print("Type of fp=", type(fp))
+    print("else block:Is File Closed?:",fp.closed)
+    print("-------------------------------")
+finally:
+    print("I am from Finally Block")
+    try:
+        fp.close() # Relinquish the Resource--Manually closing
+        print("finally block:Is File Closed?:", fp.closed)
+    except NameError:
+        print("File Name Itself does not opened-there is no need to close:")
