@@ -9,3 +9,11 @@ except FileNotFoundError:
     print("File not found, please check the path or File Does not Exist")
 else:
     print("File opened successfully") #if 'try:' block works 'else' block works
+    print('Is file closed or not', fp.closed)
+finally:
+    try:
+        fp.close()
+        print('Is file closed or not', fp.closed)
+        print("File closed successfully")
+    except NameError: #we don't have file so it can't assign it to a variable i.e. Name
+        print("File Name Itself does not opened-there is no need to close:")
