@@ -65,7 +65,7 @@ print("Type of fp=",type(fp))  # <class '_io.TextIOWrapper'>
 #program for Demonstrating Opening the File
 #FileOpen(with open('file_name','File Mode') as file_pointer_variable:) Ex1.py
 try:
-    with open("kvr2.data","r") as fp:
+    with open("kvr.data","r") as fp:
         print("--------with open() as-------------")
         print("\tFile Opened in read Mode")
         print("\tType of fp=", type(fp))
@@ -93,3 +93,19 @@ try:
     print("\tafter with open() as: Is File Closed?:", fp.closed)
 except FileNotFoundError:
     print("File Does not Exist")
+
+#=======================================================================================================================
+
+#program for Demonstrating Opening the File along with File attributes
+#FileOpenEx5.py
+try:
+    with open("kvr2.data","x+") as fp:
+        print("----------------------------------------")
+        print("\twith open() as: Is File Closed?:", fp.closed)
+        print("\tFile Name:{}".format(fp.name))
+        print("\tFile Opening Mode:{}".format(fp.mode))
+        print("\tIs File Readable? :{}".format(fp.readable()))
+        print("\tIs File Writable? :{}".format(fp.writable()))
+        print("-----------------------------------------")
+except FileExistsError:
+    print("File Name already Exist")
