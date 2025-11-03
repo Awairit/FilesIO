@@ -3,3 +3,10 @@
 #     1. write()      --> Syntax:   FilePointerObj.write(str-data)                  ,If we have non-str Data then we convert the non-str data into str type data by using str()
 #     2. writelines() --> Syntax:   FilePointerObj.writelines(Iterable-Object Data) ,If we have non-str Data then we convert the non-str data into str type data by using str()
 
+
+Creator = "Guido Van Rossum"
+with open("index.txt","w") as fp:
+    print(f"The File Name  i.e. ({fp.name}) is present") #We cant ask to show the name of file by reference pointer variable name of file because its in try block if its in except block we can say it NameError
+    fp.write("\t\t\tThe father of Python is {}\n".format(Creator))
+    fp.write("Python")
+    fp.write("\n\tChapters")
