@@ -21,3 +21,15 @@ with open("index.txt","a") as fp:
 DOB= str(20021991) #Cant use other dataTypes other than 'str'
 with open("index.txt","a") as fp:
     fp.write("\n Date of Official Release of Python is: {}" .format(DOB))
+
+#======================================================================================================================
+
+#Program for Writing the data to the Fite
+#FiLeWriteEx1. PY
+sno=300
+sname="Rashed"
+marks=23.451 # here snot sname and marks are called Objects resides in Main Memory.
+with open("index.txt","a") as fp:
+    fp.write("\n"+str(sno) + " \t ")
+    fp.write(sname + " \t ")
+    fp.write(str(marks) + " \t ")
