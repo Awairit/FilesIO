@@ -3,6 +3,14 @@
 # 1. 'open("fileName", "fileMode")' Need to close opened file by filePointer.close(), --> syntax: variable_name=open("fileName", "fileMode")
 # 2. 'with open("fileName", "fileMode") as :' no need to close PVM will close as lines of code get out from indentation block, --> syntax:  with open("fileName", "fileMode") as variable_name:
 
+#=======================================================
+#   Attributes
+#       1. filePointer.mode --> Give the file mode
+#       2. filePointer.name --> Give the file Name
+
+#   Methods
+#       1. filePointer.readable() --> Give the file is Readable or Not
+#       2. filePointer.writable() --> Give the file is Writable or Not
 try:
     fp = open("student.txt","r") #if file is not present we cant read it that's why it gives "FileNotFoundError"
 except FileNotFoundError:
@@ -109,3 +117,7 @@ try:
         print("-----------------------------------------")
 except FileExistsError:
     print("File Name already Exist")
+
+#=======================================================================================================================
+
+
