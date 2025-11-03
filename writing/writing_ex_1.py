@@ -15,3 +15,9 @@ with open("index.txt","w") as fp:
 
 with open("index.txt","a") as fp:
     fp.write("\nDjango")
+
+#=======================================================================================================================
+
+DOB= str(20021991) #Cant use other dataTypes other than 'str'
+with open("index.txt","a") as fp:
+    fp.write("\n Date of Official Release of Python is: {}" .format(DOB))
