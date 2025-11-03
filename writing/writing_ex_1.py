@@ -10,3 +10,8 @@ with open("index.txt","w") as fp:
     fp.write("\t\t\tThe father of Python is {}\n".format(Creator))
     fp.write("Python")
     fp.write("\n\tChapters")
+
+#=======================================================================================================================
+
+with open("index.txt","a") as fp:
+    fp.write("\nDjango")
