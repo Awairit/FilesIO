@@ -33,3 +33,9 @@ with open("index.txt","a") as fp:
     fp.write("\n"+str(sno) + " \t ")
     fp.write(sname + " \t ")
     fp.write(str(marks) + " \t ")
+
+#=======================================================================================================================
+
+x=[100,"RS",56.78, 2+3j]
+with open("index.txt","a") as fp:
+    fp.writelines("\n\t "+ str(x)) #Using writlines because of iterable data and it takes Value bu Value
