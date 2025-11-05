@@ -38,4 +38,22 @@ with open("index.txt","a") as fp:
 
 x=[100,"RS",56.78, 2+3j]
 with open("index.txt","a") as fp:
-    fp.writelines("\n\t "+ str(x)) #Using writlines because of iterable data and it takes Value bu Value
+    fp.writelines("\n\t "+ str(x) + " " + str(type(x))) #Using writlines because of iterable data and it takes Value bu Value
+
+#=======================================================================================================================
+
+x=(101,"DOLLAR",49.78, 3+5j)
+with open("index.txt","a") as fp:
+    fp.writelines("\n\t "+ str(x) + " " + str(type(x)))
+
+#=======================================================================================================================
+
+x={102,"POND",5.7, 55+33j}
+with open("index.txt","a") as fp:
+    fp.writelines("\n\t "+ str(x) + " " + str(type(x)))
+
+#=======================================================================================================================
+
+x={1:103, 2:"YEN", 3:6.8, 4:24+1j}
+with open("index.txt","a") as fp:
+    fp.writelines("\n\t "+ str(x) + " " + str(type(x)))
