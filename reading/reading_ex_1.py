@@ -11,4 +11,12 @@ except FileNotFoundError:
 
 #=======================================================================================================================
 
-
+# FileReadEx2.py
+try:
+    with open("D:\\Python\\FilesIO\\writing\\index.txt", "r") as fp:
+        filedata = fp.readlines()                   # Uses 'readlines'
+        print("--------------------------------")
+        print(filedata)
+        print("--------------------------------")
+except FileNotFoundError:
+    print("File Does not Exist")
