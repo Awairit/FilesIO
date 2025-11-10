@@ -20,3 +20,16 @@ try:
         print("--------------------------------")
 except FileNotFoundError:
     print("File Does not Exist")
+
+#=======================================================================================================================
+
+# FileReadEx1.py
+try:
+    with open("D:\\Python\\FilesIO\\writing\\index.txt", "r") as fp:
+        filedata = fp.read()                     #Uses 'readlines' and uses loop
+        print("--------------------------------")
+        for i in filedata:
+            print(i,end="")
+        print("--------------------------------")
+except FileNotFoundError:
+    print("File Does not Exist")
